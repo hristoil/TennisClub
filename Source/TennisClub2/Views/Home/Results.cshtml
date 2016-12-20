@@ -4,35 +4,43 @@
 }
 
 <h2>Резултати от изиграни мачове</h2>
-<div class="container">
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-       Играч 1
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
+<div class="row">
+    <div class="dropdown">
 
-        @foreach (var user in Model)
-        {
-            <li>@user.FullName</li>
-        }
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Играч 1
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
 
-    </ul>
-</div>
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-        Играч 2
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
+            @foreach (var user in Model)
+            {
+                <li>@user.FullName</li>
+            }
 
-        @foreach (var user in Model)
-        {
-            <li>@user.FullName</li>
-        }
-        @*<li><a href="@user.FullName">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JavaScript</a></li>*@
-    </ul>
-</div>
+        </ul>
+
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Играч 2
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+
+            @foreach (var user in Model)
+            {
+                <li>@user.FullName</li>
+            }
+
+        </ul>
     </div>
+    <div class="dropdown">
+             <div class="form-group">
+            @Html.Label("Result:", new { @class = "control-label col-sm-4" })
+            <div class="col-sm-4">
+                @Html.TextBox("result", null, new { @placeholder = "Enter result" })
+                <input type="submit" value="Enter" />
+            </div>
+        </div>
+
+    </div>
+</div>
