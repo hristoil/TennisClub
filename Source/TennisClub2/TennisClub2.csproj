@@ -210,6 +210,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Players.cs" />
     <Compile Include="Models\Results.cs" />
+    <Compile Include="Models\ResultViewModel.cs" />
     <Compile Include="Models\TennisLessons.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

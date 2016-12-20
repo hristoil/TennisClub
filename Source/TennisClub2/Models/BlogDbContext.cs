@@ -17,7 +17,7 @@ namespace TennisClub2.Models
         }
 
         public virtual IDbSet<Results> Results { get; set; }
-
+       
 
 
         public static BlogDbContext Create()
