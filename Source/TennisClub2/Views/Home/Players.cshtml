@@ -1,0 +1,33 @@
+﻿@model List<TennisClub2.Models.ApplicationUser>
+
+@{
+    ViewBag.Title = "Играчи";
+}
+
+    @foreach (var user in Model)
+    {
+        <div class="row" ><div class="col-md-6">
+    @user.FullName  <address>
+        <strong>имейл:</strong>   <a href="@user.Email">@user.Email</a><br />
+    </address>
+            </div>
+        </div>
+    }
+@*<address>
+    <strong>имейл:</strong>   <a href="mailto:h.chorbadzhiyski@gmail.com">h.chorbadzhiyski@gmail.com</a><br />
+</address>*@
+
+
+
+
+@*<div class="alert alert-info">
+   <ol>
+       string players = database.FullName;
+   </ol>
+     Христо Чорбаджийски<br />
+    Николай Наумов<br />
+    Здравко Карабенчев<br />
+    Валентин Чорбаджийски<br />
+    
+</div>*@
+    

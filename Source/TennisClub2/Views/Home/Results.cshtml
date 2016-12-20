@@ -1,0 +1,38 @@
+﻿@model List<TennisClub2.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Results";
+}
+
+<h2>Резултати от изиграни мачове</h2>
+<div class="container">
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+       Играч 1
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+
+        @foreach (var user in Model)
+        {
+            <li>@user.FullName</li>
+        }
+
+    </ul>
+</div>
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Играч 2
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+
+        @foreach (var user in Model)
+        {
+            <li>@user.FullName</li>
+        }
+        @*<li><a href="@user.FullName">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>*@
+    </ul>
+</div>
+    </div>
